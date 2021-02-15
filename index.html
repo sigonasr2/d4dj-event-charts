@@ -1,0 +1,268 @@
+<head>
+<meta charset="utf-8"/>
+<title>Shiny Smily Scratch！ Event Tracker</title>
+</head>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="moment.js"></script>
+<script type="text/javascript" src="Chart.js"></script>
+<body style="background-color:#102030">
+<h1 style="color:#999999;text-align:center;margin-left:auto;margin-right:auto;">
+<sup><a href="9.html">ᐊ</a></sup> <span style="position:relative0;text-decoration:underline;top:15px;">Shiny Smily Scratch！</span> <sup>ᐅ</sup>
+</h1>
+<h3 style="color:#999999;text-align:center;margin-left:auto;margin-right:auto;">
+<span class="time"></span>/201 hours
+</h3>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="chart-container" style=" position: relative;margin: auto;">
+			<canvas id="myChart" height="150"></canvas>
+			</div>
+			<script type="text/javascript" src="chart.js"></script>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col pt-5">
+			<div class="container">
+				<div class="rounded row justify-content-md-center ">
+					<div class="p-0 col col-1 text-white bg-dark border border-light text-center">
+					<h6>#</h6>
+					</div>
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<h6>Last Submit<br>直近スコア更新</h6>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<h6 style="color:#69a4c9;">Current Estimate<br>現在スコア予想</sub></h6>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<h6 style="color:#e3a03b;">Final Prediction<br>イベント終了スコア予想</h6>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<h6>Rate (EP/hr)<br>毎時獲得ポイント</h6>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-warning bg-dark border border-light text-center">
+					<b>1位</b>
+					</div>
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points1">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points1_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points1_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points1rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-primary bg-dark border border-light text-center">
+					<b>2位</b>
+					</div>
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points2_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points2_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points2rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-secondary bg-dark border border-light text-center">
+					<b>3位</b>
+					</div>
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points3_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points3_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points3rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-white bg-dark border border-light text-center">
+					10位
+					</div>
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points10">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points10_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points10_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points10rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-white bg-dark border border-light text-center">
+					50位
+					</div>
+					
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points50">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points50_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points50_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points50rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-white bg-dark border border-light text-center">
+					100位
+					</div>
+
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points100">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points100_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points100_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points100rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-white bg-dark border border-light text-center">
+					500位
+					</div>
+					
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points500">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points500_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points500_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points500rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-white bg-dark border border-light text-center">
+					1000位
+					</div>
+					
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points1000">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points1000_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points1000_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points1000rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-white bg-dark border border-light text-center">
+					2000位
+					</div>
+					
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points2000">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points2000_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points2000_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points2000rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-white bg-dark border border-light text-center">
+					5000位
+					</div>
+					
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points5000">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points5000_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points5000_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points5000rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-white bg-dark border border-light text-center">
+					10000位
+					</div>
+					
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points10000">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points10000_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points10000_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points10000rate">...</b>
+					</div>
+				</div>
+				<div class="rounded row justify-content-md-center">
+					<div class="col col-1 text-white bg-dark border border-light text-center">
+					20000位
+					</div>
+					
+					<div class="col col-3 text-white bg-dark border border-light text-center">
+					<b class="points20000">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#95b4c7" class="points20000_2">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b style="color:#e0bb82" class="points20000_3">...</b>
+					</div>
+					<div class="col col-2 text-white bg-dark border border-light text-center">
+					<b class="points20000rate">...</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-12">
+			<img src="t20.png" class="pt-5" style="color:#999999;width:812;text-align:center;margin-left:auto;margin-right:auto;">
+		</div>
+	</div>
+</div>
+</body>
